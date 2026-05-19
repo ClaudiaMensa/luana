@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luana Nunes Calixto | Atriz, Produtora e Neurocientista</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        gold: {
+                            300: '#FDE047',
+                            400: '#EAB308',
+                            500: '#D4AF37', // Classic Gold
+                            600: '#CA8A04',
+                            700: '#A16207',
+                        },
+                        dark: {
+                            900: '#0A0A0A',
+                            800: '#141414',
+                            700: '#1F1F1F',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #F5F5F5;
+        }
+        
+        .text-gradient-gold {
+            background: linear-gradient(to right, #D4AF37, #FDE047, #D4AF37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .border-gradient-gold {
+            border-image: linear-gradient(to right, #D4AF37, #FDE047, #D4AF37) 1;
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Scrollbar for elegance */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0A; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37; 
+        }
+    </style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden selection:bg-gold-500 selection:text-dark-900">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-dark-900/80 border-b border-white/5" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-serif text-2xl font-bold tracking-widest text-gradient-gold uppercase">LNC</a>
+            
+            <div class="hidden md:flex space-x-8 text-sm tracking-widest uppercase font-light">
+                <a href="#essencia" class="hover:text-gold-500 transition-colors">Essência</a>
+                <a href="#expertise" class="hover:text-gold-500 transition-colors">Expertise</a>
+                <a href="#portfolio" class="hover:text-gold-500 transition-colors">Portfólio</a>
+                <a href="#novidades" class="hover:text-gold-500 transition-colors">Novidades</a>
+                <a href="#galeria" class="hover:text-gold-500 transition-colors">Galeria</a>
+                <a href="#referencias" class="hover:text-gold-500 transition-colors">Referências</a>
+            </div>
+
+            <button class="md:hidden text-white hover:text-gold-500" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="ph ph-list text-3xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-800 border-b border-white/10 absolute w-full">
+            <div class="flex flex-col px-6 py-4 space-y-4 text-center text-sm tracking-widest uppercase">
+                <a href="#essencia" class="hover:text-gold-500">Essência</a>
+                <a href="#expertise" class="hover:text-gold-500">Expertise</a>
+                <a href="#portfolio" class="hover:text-gold-500">Portfólio</a>
+                <a href="#novidades" class="hover:text-gold-500">Novidades</a>
+                <a href="#galeria" class="hover:text-gold-500">Galeria</a>
+                <a href="#referencias" class="hover:text-gold-500">Referências</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1514306191717-452ec28c7814?q=80&w=2069&auto=format&fit=crop')] bg-cover bg-center opacity-20 mix-blend-luminosity"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-dark-900/50 via-dark-900/80 to-dark-900"></div>
+        
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto fade-in-up">
+            <p class="text-gold-500 tracking-[0.3em] uppercase text-sm mb-6 font-medium">A Arte de Transformar Pessoas e Palcos</p>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-white drop-shadow-lg">
+                Luana Nunes <span class="block text-gradient-gold italic mt-2">Calixto</span>
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+                Atriz • Produtora • Apresentadora • Neurocientista
+            </p>
+            <div class="mt-12">
+                <a href="#essencia" class="inline-block border border-gold-500 text-gold-500 px-8 py-3 rounded-full uppercase tracking-widest text-xs hover:bg-gold-500 hover:text-dark-900 transition-all duration-300">
+                    Conheça a Essência
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="essencia" class="py-24 bg-dark-800 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <div class="order-2 lg:order-1 fade-in-up">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">Uma Pessoa <span class="text-gradient-gold italic">Ímpar</span></h2>
+                    <div class="w-20 h-1 bg-gold-500 mb-8"></div>
+                    <div class="space-y-6 text-gray-300 font-light leading-relaxed text-lg">
+                        <p>
+                            Luana Nunes Calixto transcende as definições tradicionais. Ela é uma força rara que une a sensibilidade artística à precisão científica. Neurocientista e especialista em desenvolvimento de pessoas, Luana atua com maestria tanto no rigoroso mundo corporativo quanto sob os holofotes do palco.
+                        </p>
+                        <p>
+                            Seu portfólio é vasto e diversificado porque ela é, acima de tudo, uma pessoa que <strong>sabe fazer acontecer</strong>. Seja interpretando personagens complexos, produzindo eventos grandiosos ou transformando a cultura de uma empresa através da ciência do cérebro, Luana entrega resultados com excelência, carinho e um cuidado ímpar.
+                        </p>
+                        <p class="text-gold-400 italic font-serif text-xl">
+                            "A verdadeira conexão acontece quando a emoção da arte encontra a inteligência da mente."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Your specifically requested image setup -->
+                <div class="order-1 lg:order-2 relative fade-in-up">
+                    <div class="relative p-2 border border-white/10 rounded-t-full rounded-b-lg overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gold-500/20 to-transparent mix-blend-overlay group-hover:opacity-0 transition-opacity duration-700"></div>
+                        <!-- IMPORTANT: This is the local image you requested -->
+                        <img src="./luana.jpg" alt="Luana Nunes Calixto" onerror="this.src='https://placehold.co/800x1000/141414/D4AF37?text=Adicione+luana.jpg'" class="w-full h-auto rounded-t-full rounded-b-lg object-cover grayscale group-hover:grayscale-0 transition-all duration-700 aspect-[3/4]">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-dark-900 border border-gold-500/30 rounded-full flex items-center justify-center animate-pulse">
+                        <i class="ph ph-star-four text-gold-500 text-4xl"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise" class="py-24 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <p class="text-gold-500 tracking-[0.2em] uppercase text-sm mb-2">Dualidade Perfeita</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold">Domínio & <span class="text-gradient-gold italic">Atuação</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <!-- Arte & Entretenimento -->
+                <div class="bg-dark-800 p-10 rounded-2xl border border-white/5 hover:border-gold-500/30 transition-colors fade-in-up relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-gold-500 to-transparent"></div>
+                    <div class="flex items-center mb-8">
+                        <i class="ph ph-masks-theater text-4xl text-gold-500 mr-4"></i>
+                        <h3 class="font-serif text-3xl">Arte & <span class="italic text-gray-400">Entretenimento</span></h3>
+                    </div>
+                    
+                    <ul class="space-y-8">
+                        <li>
+                            <h4 class="text-xl font-medium text-white mb-2">Atriz</h4>
+                            <p class="text-gray-400 font-light">Interpretações marcantes que combinam técnica refinada, sensibilidade artística e profunda investigação psicológica de personagens.</p>
+                        </li>
+                        <li>
+                            <h4 class="text-xl font-medium text-white mb-2">Apresentadora & Mestre de Cerimônias</h4>
+                            <p class="text-gray-400 font-light">Condução de eventos com extrema elegância, dinamismo e alto poder de engajamento com públicos diversos.</p>
+                        </li>
+                        <li>
+                            <h4 class="text-xl font-medium text-white mb-2">Produtora</h4>
+                            <p class="text-gray-400 font-light">Visão estratégica e execução impecável nos bastidores. A capacidade única de organizar, liderar e transformar grandes ideias em realidade palpável.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Neurociência & Corporativo -->
+                <div class="bg-dark-800 p-10 rounded-2xl border border-white/5 hover:border-gold-500/30 transition-colors fade-in-up relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-gold-500 to-transparent"></div>
+                    <div class="flex items-center mb-8">
+                        <i class="ph ph-brain text-4xl text-gold-500 mr-4"></i>
+                        <h3 class="font-serif text-3xl">Neurociência & <span class="italic text-gray-400">Corporativo</span></h3>
+                    </div>
+                    
+                    <ul class="space-y-8">
+                        <li>
+                            <h4 class="text-xl font-medium text-white mb-2">Desenvolvimento de Pessoas</h4>
+                            <p class="text-gray-400 font-light">Treinamentos corporativos estruturados com base científica (neurociência) visando alta performance, bem-estar e liderança.</p>
+                        </li>
+                        <li>
+                            <h4 class="text-xl font-medium text-white mb-2">Palestras Magnéticas</h4>
+                            <p class="text-gray-400 font-light">Conteúdos que conectam emoção e dados analíticos, inspirando equipes e transformando a cultura organizacional de dentro para fora.</p>
+                        </li>
+                        <li>
+                            <h4 class="text-xl font-medium text-white mb-2">Consultoria de Presença</h4>
+                            <p class="text-gray-400 font-light">Mentorias exclusivas para executivos aprimorarem comunicação não-verbal, oratória de impacto e inteligência emocional em momentos críticos.</p>
+                        </li>
+                        <li>
+                            <h4 class="text-xl font-medium text-white mb-2">Consultoria de Desenvolvimento de P&D</h4>
+                            <p class="text-gray-400 font-light">Pesquisa e Desenvolvimento com foco em inovação humana, aplicando a neurociência para estruturar e otimizar processos criativos em grandes corporações.</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 bg-dark-800 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4">Portfólio <span class="text-gradient-gold italic">Selecíonado</span></h2>
+                <p class="text-gray-400 font-light max-w-2xl mx-auto">Um vislumbre dos projetos marcantes onde a arte e a excelência executiva se encontram.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="group relative overflow-hidden rounded-xl bg-dark-900 fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1507676184212-d0330a15233c?q=80&w=2069&auto=format&fit=crop" alt="Palco" class="w-full h-64 object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <span class="text-gold-500 text-xs tracking-widest uppercase mb-2 block">Teatro / Atriz</span>
+                        <h3 class="text-xl font-serif text-white mb-1">O Peso da Alma</h3>
+                        <p class="text-sm text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">Protagonista na peça aclamada pela crítica.</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="group relative overflow-hidden rounded-xl bg-dark-900 fade-in-up" style="transition-delay: 100ms;">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop" alt="Corporativo" class="w-full h-64 object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <span class="text-gold-500 text-xs tracking-widest uppercase mb-2 block">Mestre de Cerimônias</span>
+                        <h3 class="text-xl font-serif text-white mb-1">Summit Global 2023</h3>
+                        <p class="text-sm text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">Condução do evento de inovação para 5 mil líderes.</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="group relative overflow-hidden rounded-xl bg-dark-900 fade-in-up" style="transition-delay: 200ms;">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" alt="Neurociência" class="w-full h-64 object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <span class="text-gold-500 text-xs tracking-widest uppercase mb-2 block">Treinamento Corporativo</span>
+                        <h3 class="text-xl font-serif text-white mb-1">Neurociência na Liderança</h3>
+                        <p class="text-sm text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">Programa de desenvolvimento para executivos C-Level.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 fade-in-up">
+                <button class="text-white border-b border-gold-500 pb-1 hover:text-gold-500 transition-colors uppercase tracking-widest text-sm">Ver Portfólio Completo</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="novidades" class="py-24 bg-dark-900 border-b border-white/5 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1593697821252-0c9137d9fc45?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-5 mix-blend-screen"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 fade-in-up">
+                <p class="text-gold-500 tracking-[0.2em] uppercase text-sm mb-2">Projeto Inédito</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4">Frequências <span class="text-gradient-gold italic">Ocultas</span></h2>
+                <p class="text-gray-400 font-light max-w-2xl mx-auto">Os bastidores de uma nova era. Uma experiência que apagará as linhas entre a ciência da mente e a precisão do corpo.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- LinkedIn Post Enigma -->
+                <div class="bg-dark-800/80 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-[#0A66C2]/50 transition-all duration-500 group fade-in-up relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-[#0A66C2]/10 rounded-bl-full transition-transform group-hover:scale-110"></div>
+                    
+                    <div class="flex items-center justify-between mb-8 relative z-10">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-dark-900 border border-white/10 flex items-center justify-center mr-3">
+                                <i class="ph-fill ph-linkedin-logo text-[#0A66C2] text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white text-sm font-medium">Luana Nunes Calixto</h4>
+                                <span class="text-gray-500 text-xs">Teaser Corporativo</span>
+                            </div>
+                        </div>
+                        <i class="ph ph-dots-three text-gray-500 text-xl"></i>
+                    </div>
+                    
+                    <p class="text-gray-300 font-light italic leading-relaxed mb-8 relative z-10">
+                        "O que acontece quando a geometria exata do movimento se choca com os mistérios não mapeados da mente? 🧠🩰<br><br>O palco corporativo e o teatro acabam de ganhar uma nova dimensão sonora. Ao lado da brilhante bailarina L. Picheth, estamos construindo um ecossistema de ideias que não é para ser apenas ouvido, mas decodificado.<br><br>Um novo podcast está sendo gerado. Preparem suas sinapses para o inesperado."
+                    </p>
+                    
+                    <a href="#" onclick="event.preventDefault(); window.alert('Você encontrou um teaser secreto! \n\nO link oficial para a publicação do LinkedIn será liberado no momento exato do lançamento do podcast. Fique atento às vibrações.');" class="inline-flex items-center justify-center w-full bg-dark-900/50 hover:bg-[#0A66C2]/10 border border-white/5 hover:border-[#0A66C2]/30 text-white py-3 rounded-lg text-xs tracking-widest uppercase transition-all duration-300 relative z-10">
+                        Visualizar no LinkedIn <i class="ph ph-arrow-up-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Instagram Post Enigma -->
+                <div class="bg-dark-800/80 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-[#E1306C]/50 transition-all duration-500 group fade-in-up relative overflow-hidden" style="transition-delay: 150ms;">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#833AB4] via-[#FD1D1D] to-[#F56040] opacity-10 rounded-bl-full transition-transform group-hover:scale-110"></div>
+                    
+                    <div class="flex items-center justify-between mb-8 relative z-10">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-dark-900 border border-white/10 flex items-center justify-center mr-3 relative overflow-hidden">
+                                <div class="absolute inset-0 border-[2px] border-transparent rounded-full" style="background: linear-gradient(#141414, #141414) padding-box, linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) border-box;"></div>
+                                <i class="ph-fill ph-instagram-logo text-white text-lg relative z-10"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white text-sm font-medium">luanacalixto</h4>
+                                <span class="text-gray-500 text-xs">Spoiler Alert</span>
+                            </div>
+                        </div>
+                        <i class="ph ph-dots-three text-gray-500 text-xl"></i>
+                    </div>
+                    
+                    <p class="text-gray-300 font-light italic leading-relaxed mb-8 relative z-10">
+                        "As cortinas se fecham temporariamente para que os microfones se abram em definitivo. 🎙️✨<br><br>Existe uma frequência invisível que conecta a fluidez absurda de uma ponta de ballet à neuroplasticidade de um cérebro aprendendo. Eu e a mestra L. Picheth estivemos no estúdio traduzindo o indizível.<br><br>O véu será levantado muito em breve. Vocês estão prontos para escutar?"
+                    </p>
+                    
+                    <a href="#" onclick="event.preventDefault(); window.alert('Você acessou uma frequência oculta! \n\nAguarde o lançamento oficial no Instagram para descobrir o episódio #01.');" class="inline-flex items-center justify-center w-full bg-dark-900/50 hover:bg-[#E1306C]/10 border border-white/5 hover:border-[#E1306C]/30 text-white py-3 rounded-lg text-xs tracking-widest uppercase transition-all duration-300 relative z-10">
+                        Visualizar no Instagram <i class="ph ph-arrow-up-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="py-24 bg-dark-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <p class="text-gold-500 tracking-[0.2em] uppercase text-sm mb-2">Memórias & Momentos</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold">Álbuns <span class="text-gradient-gold italic">Visuais</span></h2>
+                <p class="text-gray-400 font-light max-w-2xl mx-auto mt-4">Uma jornada visual pelos palcos iluminados, jantares memoráveis, showrooms e eventos de grande impacto.</p>
+            </div>
+
+            <!-- Grade Expandida e Estável: 6 Fotos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Foto 1: Shows e Palco -->
+                <div class="h-80 relative overflow-hidden rounded-xl group fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1974&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt="Shows e Apresentações">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                        <span class="text-gold-500 font-serif italic text-2xl mb-1">Shows & Espetáculos</span>
+                        <p class="text-gray-300 font-light text-xs tracking-wider uppercase">Presença de Palco</p>
+                    </div>
+                </div>
+
+                <!-- Foto 2: P&D e Neurociência -->
+                <div class="h-80 relative overflow-hidden rounded-xl group fade-in-up" style="transition-delay: 100ms;">
+                    <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt="Pesquisa e Desenvolvimento e Neurociência">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                        <span class="text-gold-500 font-serif italic text-2xl mb-1">Pesquisa & Desenvolvimento</span>
+                        <p class="text-gray-300 font-light text-xs tracking-wider uppercase">Neurociência & Inovação Humana</p>
+                    </div>
+                </div>
+
+                <!-- Foto 3: Grandes Eventos -->
+                <div class="h-80 relative overflow-hidden rounded-xl group fade-in-up" style="transition-delay: 200ms;">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt="Grandes Eventos">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                        <span class="text-gold-500 font-serif italic text-2xl mb-1">Grandes Eventos</span>
+                        <p class="text-gray-300 font-light text-xs tracking-wider uppercase">Condução de Multidões</p>
+                    </div>
+                </div>
+
+                <!-- Foto 4: Showrooms e Exposições -->
+                <div class="h-80 relative overflow-hidden rounded-xl group fade-in-up" style="transition-delay: 300ms;">
+                    <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt="Showrooms">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                        <span class="text-gold-500 font-serif italic text-2xl mb-1">Showrooms</span>
+                        <p class="text-gray-300 font-light text-xs tracking-wider uppercase">Lançamentos Exclusivos</p>
+                    </div>
+                </div>
+
+                <!-- Foto 5: Teatro Clássico -->
+                <div class="h-80 relative overflow-hidden rounded-xl group fade-in-up" style="transition-delay: 400ms;">
+                    <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt="Palcos e Teatros">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                        <span class="text-gold-500 font-serif italic text-2xl mb-1">Teatro</span>
+                        <p class="text-gray-300 font-light text-xs tracking-wider uppercase">Atuação Profunda</p>
+                    </div>
+                </div>
+
+                <!-- Foto 6: Corporativo & Treinamentos -->
+                <div class="h-80 relative overflow-hidden rounded-xl group fade-in-up" style="transition-delay: 500ms;">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt="Corporativo">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                        <span class="text-gold-500 font-serif italic text-2xl mb-1">Cultura Corporativa</span>
+                        <p class="text-gray-300 font-light text-xs tracking-wider uppercase">Neurociência & Pessoas</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="referencias" class="py-24 bg-dark-900 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-32 -mb-32 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 fade-in-up">
+                <i class="ph-fill ph-quotes text-5xl text-gold-500/40 mb-4 inline-block"></i>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold">O Que <span class="text-gradient-gold italic">Dizem</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Reference 1 -->
+                <div class="bg-dark-900 p-8 rounded-2xl border border-white/5 relative fade-in-up">
+                    <p class="text-gray-300 font-light italic mb-6 leading-relaxed">
+                        "A Luana trouxe para a nossa diretoria uma visão completamente nova. Sua palestra baseada em neurociência não apenas motivou, mas deu ferramentas reais para lidarmos com a pressão diária. Uma presença magnética."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-dark-700 rounded-full flex items-center justify-center text-gold-500 font-serif mr-4">R</div>
+                        <div>
+                            <h4 class="text-white font-medium">Roberto S.</h4>
+                            <span class="text-gold-600 text-xs uppercase tracking-wider">CEO, Tech Corp</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reference 2 -->
+                <div class="bg-dark-900 p-8 rounded-2xl border border-white/5 relative fade-in-up" style="transition-delay: 100ms;">
+                    <p class="text-gray-300 font-light italic mb-6 leading-relaxed">
+                        "Trabalhar com a Luana no palco é ter a certeza de excelência. Como atriz, ela entrega uma profundidade que emociona. Como produtora, faz tudo acontecer nos bastidores com uma organização invejável."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-dark-700 rounded-full flex items-center justify-center text-gold-500 font-serif mr-4">M</div>
+                        <div>
+                            <h4 class="text-white font-medium">Marina C.</h4>
+                            <span class="text-gold-600 text-xs uppercase tracking-wider">Diretora de Teatro</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reference 3 -->
+                <div class="bg-dark-900 p-8 rounded-2xl border border-white/5 relative fade-in-up" style="transition-delay: 200ms;">
+                    <p class="text-gray-300 font-light italic mb-6 leading-relaxed">
+                        "A consultoria de presença da Luana mudou minha forma de me comunicar. A união de técnicas de atuação com ciência comportamental é o diferencial mais poderoso que já experimentei na carreira."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-dark-700 rounded-full flex items-center justify-center text-gold-500 font-serif mr-4">A</div>
+                        <div>
+                            <h4 class="text-white font-medium">Aline B.</h4>
+                            <span class="text-gold-600 text-xs uppercase tracking-wider">Executiva de Vendas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark-900 border-t border-white/10 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 lg:col-span-2">
+                    <h2 class="font-serif text-3xl font-bold tracking-widest text-gradient-gold uppercase mb-6">Luana Calixto</h2>
+                    <p class="text-gray-400 font-light max-w-sm mb-8">
+                        Elevando o potencial humano através da união perfeita entre Arte, Entretenimento e Neurociência.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-gold-500 hover:text-dark-900 transition-colors">
+                            <i class="ph-fill ph-instagram-logo text-xl"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-gold-500 hover:text-dark-900 transition-colors">
+                            <i class="ph-fill ph-linkedin-logo text-xl"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-gold-500 hover:text-dark-900 transition-colors">
+                            <i class="ph-fill ph-youtube-logo text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-medium mb-6 uppercase tracking-wider text-sm">Navegação</h4>
+                    <ul class="space-y-3 text-gray-400 font-light text-sm">
+                        <li><a href="#essencia" class="hover:text-gold-500 transition-colors">A Essência</a></li>
+                        <li><a href="#expertise" class="hover:text-gold-500 transition-colors">Expertise</a></li>
+                        <li><a href="#portfolio" class="hover:text-gold-500 transition-colors">Portfólio</a></li>
+                        <li><a href="#galeria" class="hover:text-gold-500 transition-colors">Galeria</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-medium mb-6 uppercase tracking-wider text-sm">Contato</h4>
+                    <ul class="space-y-4 text-gray-400 font-light text-sm">
+                        <li class="flex items-center">
+                            <i class="ph ph-envelope-simple text-gold-500 mr-3 text-lg"></i>
+                            contato@luanacalixto.com.br
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ph ph-whatsapp-logo text-gold-500 mr-3 text-lg"></i>
+                            +55 (11) 99999-9999
+                        </li>
+                        <li class="mt-6">
+                            <button onclick="alert('Funcionalidade de contato em desenvolvimento.')" class="w-full bg-gold-500 text-dark-900 font-medium py-3 px-6 rounded hover:bg-gold-400 transition-colors uppercase tracking-widest text-xs">
+                                Solicitar Proposta
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 text-center md:flex md:justify-between items-center text-xs text-gray-600 font-light">
+                <p>&copy; 2026 Luana Nunes Calixto. Todos os direitos reservados.</p>
+                <p class="mt-2 md:mt-0">Design & Desenvolvimento Exclusivo</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to handle fade-in animations on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach(element => {
+                observer.observe(element);
+            });
+
+            // Navbar background blur on scroll
+            window.addEventListener('scroll', () => {
+                const nav = document.getElementById('navbar');
+                if (window.scrollY > 50) {
+                    nav.classList.add('bg-dark-900/90', 'shadow-lg');
+                    nav.classList.remove('bg-dark-900/80');
+                } else {
+                    nav.classList.remove('bg-dark-900/90', 'shadow-lg');
+                    nav.classList.add('bg-dark-900/80');
+                }
+            });
+        });
+        
+        // Override default alert for aesthetic reasons (as per strict rules)
+        window.alert = function(message) {
+            const modal = document.createElement('div');
+            modal.innerHTML = `
+                <div style="position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 9999; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px);">
+                    <div style="background: #141414; border: 1px solid #D4AF37; padding: 2rem; border-radius: 8px; text-align: center; max-width: 400px; width: 90%;">
+                        <i class="ph ph-envelope-simple-open text-4xl text-gold-500 mb-4 block"></i>
+                        <h3 class="text-white font-serif text-xl mb-2">Mensagem</h3>
+                        <p class="text-gray-400 font-light mb-6">${message}</p>
+                        <button onclick="this.parentElement.parentElement.remove()" class="bg-gold-500 text-dark-900 px-6 py-2 rounded uppercase tracking-widest text-xs font-medium hover:bg-gold-400 transition-colors">Fechar</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        };
+    </script>
+</body>
+</html>
